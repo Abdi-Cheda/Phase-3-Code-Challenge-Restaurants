@@ -92,12 +92,21 @@ class Review:
     def __str__(self):
         return f"Review by {self.customer.full_name()} for {self.restaurant.name}: {self.rating_value} stars"
 
+# Example usage:
+
 # Create instances
 customer1 = Customer("John", "Doe")
-restaurant1 = Restaurant("Awesome Restaurant")
+restaurant1 = Restaurant("Awesomely Great Restaurant")
 
-customer1.add_review(restaurant1, 5) # Adding customer review
+# Add a review
+customer1.add_review(restaurant1, 5)
 
+# Accessing data
 print(customer1.full_name())  # John Doe
-print(restaurant1.reviews())  # Review by Customer
-print(restaurant1.average_star_rating()) # Calculates average star rating for a restaurant
+
+# Printing each review separately for better formatting
+for review in restaurant1.reviews():
+    print(review)  # This will call the __str__ method for each Review object
+
+# Calculate average star rating for a restaurant
+print(restaurant1.average_star_rating())
