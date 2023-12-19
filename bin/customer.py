@@ -89,6 +89,9 @@ class Review:
     def restaurant(self):
         return self.restaurant
 
+    def __str__(self):
+        return f"Review by {self.customer.full_name()} for {self.restaurant.name}: {self.rating_value} stars"
+
 # Create instances
 customer1 = Customer("John", "Doe")
 restaurant1 = Restaurant("Awesome Restaurant")
