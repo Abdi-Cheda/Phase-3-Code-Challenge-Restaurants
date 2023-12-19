@@ -89,19 +89,12 @@ class Review:
     def restaurant(self):
         return self.restaurant
 
-
-# Example usage:
-
 # Create instances
 customer1 = Customer("John", "Doe")
 restaurant1 = Restaurant("Awesome Restaurant")
 
-# Add a review
-customer1.add_review(restaurant1, 5)
+customer1.add_review(restaurant1, 5) # Adding customer review
 
-# Accessing data
 print(customer1.full_name())  # John Doe
-print(restaurant1.reviews())  # [Review object]
-
-# Calculate average star rating for a restaurant
-print(restaurant1.average_star_rating())
+print(restaurant1.reviews())  # Review by Customer
+print(restaurant1.average_star_rating()) # Calculates average star rating for a restaurant
