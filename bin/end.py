@@ -1,7 +1,7 @@
 import sys, os
 
 if __name__ == "__main__":
-    name = 'cheda.bundle'
+    name = 'abdi-cheda'
     with open('bin/config') as config_file:
         name = config_file.read()
 
