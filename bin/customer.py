@@ -37,7 +37,6 @@ class Customer:
         review = Review(self, restaurant, rating)
         return review
 
-
 class Restaurant:
     all_restaurants = []
 
@@ -66,7 +65,6 @@ class Restaurant:
         else:
             return 0
 
-
 class Review:
     all_reviews = []
 
@@ -92,16 +90,11 @@ class Review:
     def __str__(self):
         return f"Review by {self.customer.full_name()}: {self.restaurant.name}: Ratings: {self.rating_value}.0 Star"
 
-# Create instances
 customer1 = Customer("John", "Doe")
 restaurant1 = Restaurant("Awesomely Great Restaurant")
-
 customer1.add_review(restaurant1, 5) # Adding a review
 
 print(customer1.full_name())  # John Doe
-
-# Printing each review separately for better formatting
-for review in restaurant1.reviews():
-    print(review)  # This will call the __str__ method for each Review object
-
+for review in restaurant1.reviews(): # Show customer review
+    print(review)
 print(restaurant1.average_star_rating()) # Calculate average star rating for the restaurant
